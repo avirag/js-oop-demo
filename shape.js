@@ -31,5 +31,9 @@ function Square(size) {
   this.size = size;
 }
 
-Square.prototype = Object.create(Shape.prototype);
-Square.prototype.constructor = Square;
+function extend(Child, Parent) {
+  Child.prototype = Object.create(Parent.prototype);
+  Child.prototype.constructor = Child;
+}
+
+extend(Square, Shape);
