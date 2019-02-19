@@ -21,13 +21,15 @@ Circle.prototype.draw = function() {
 }
 
 const s = new Shape();
-const c = new Circle(1, 'red');
+
 
 // new Circle.prototype.constructor(1)
 // equal to
 // new Circle(1)
 
-function Square(size) {
+function Square(size, color) {
+  Shape.call(this, color);
+
   this.size = size;
 }
 
@@ -37,3 +39,11 @@ function extend(Child, Parent) {
 }
 
 extend(Square, Shape);
+
+Square.prototype.duplicate = function() {
+  Shape.prototype.duplicate.call(this);
+
+  console.log('duplicate - overwrite');
+}
+
+const sq = new Square(2, 'green');
