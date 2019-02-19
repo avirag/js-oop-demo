@@ -28,3 +28,7 @@ Primitives are copied by their value
 Objects are copied by their reference
 ```
 * Private properties and methods
+
+## Inheritance
+Every object has a prototype, except the root object.
+* instance member, prototype member
