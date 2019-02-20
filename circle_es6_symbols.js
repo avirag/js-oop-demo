@@ -5,6 +5,8 @@ class Circle {
   constructor(radius) {
     // this.radius = radius;
     // this['radius'] = radius;
+
+    /* private */
     this[_radius] = radius;
   }
 
@@ -13,6 +15,7 @@ class Circle {
 
   // }
 
+  /* private */
   [_draw]() {
 
   }
