@@ -20,6 +20,17 @@ class Circle {
     privateProps.get(this).radius;
   }
 
+  get radius() {
+    return _radius.get(this);
+  }
+
+  set radius(value) {
+    if(value <= 0) {
+      throw new Error('Invalid radius.');
+    }
+    _radius.set(this, value);
+  }
+
   draw() {
     console.log(_radius.get(this));
     _move.get(this)();
@@ -27,3 +38,4 @@ class Circle {
 }
 
 const c = new Circle(1);
+console.log(c.radius);
