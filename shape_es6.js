@@ -18,6 +18,11 @@ class Circle extends Shape {
   draw() {
     console.log('draw');
   }
+
+  move() {
+    // super.move();
+    console.log('circle move');
+  }
 }
 
 const c = new Circle('red', 1);
