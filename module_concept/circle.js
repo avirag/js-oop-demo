@@ -2,7 +2,7 @@
 const _radius = new WeakMap();
 
 // Public Interface
-class Circle {
+export class Circle {
   constructor(radius) {
     _radius.set(this, radius);
   }
@@ -12,4 +12,4 @@ class Circle {
   }
 }
 
-module.exports = Circle;
+// module.exports = Circle;
